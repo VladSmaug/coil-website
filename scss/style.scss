@@ -1,6 +1,7 @@
 @import url("./fonts.css");
 @import url("../css/normalize.css");
 @import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
+@import url("./menu.css");
 
 html, body {
     height: 100%;
@@ -33,6 +34,7 @@ html, body {
     background: #f3e9dc;
     color: #505d6f;
     padding: 1rem 0;
+    z-index: 11;
     .container{
       display: flex;
       align-items: center;
@@ -47,6 +49,20 @@ html, body {
         width: 200px;
       }
     }
+    .desc__hide{
+      display: none;
+    }
+    & .desc__hide{
+      @media (max-width: 1024px) {
+        display: block;
+      }
+    }
+    & .mobile__hide{
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
+      
     &__nav {
       
       .nav__list {
@@ -139,20 +155,20 @@ html, body {
       .swiper-wrapper{
         width: 100vw;
         height: 800px;
+        @media (max-width: 1024px) {
+          height: 300px;
+        }
         .swiper-slide {
-          background-size: cover;
-          background-position: 50%;
+          background-position: center;
           display: flex;
           align-items: center;
           justify-content: center;
           flex-direction: column;
           h2{
-            
             display: block;
             background-color: #f3e9dc;
             text-align: center;
             border-radius: 20px;
-            
           }
           div{
             font-weight: bold;
@@ -309,7 +325,7 @@ html, body {
         text-align: left;
         .social-icons {
           display: flex;
-          gap: 10px; // Відстань між іконками
+          gap: 10px; 
         
           div {
             width: 40px;

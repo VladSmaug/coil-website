@@ -1,6 +1,7 @@
 @import url("./fonts.css");
 @import url("../css/normalize.css");
 @import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
+@import url("./menu.css");
 html, body {
   height: 100%;
 }
@@ -32,6 +33,7 @@ body a {
   background: #f3e9dc;
   color: #505d6f;
   padding: 1rem 0;
+  z-index: 11;
 }
 .header .container {
   display: flex;
@@ -44,6 +46,19 @@ body a {
 }
 .header__logo img {
   width: 200px;
+}
+.header .desc__hide {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .header .desc__hide {
+    display: block;
+  }
+}
+@media (max-width: 1024px) {
+  .header .mobile__hide {
+    display: none;
+  }
 }
 .header__nav .nav__list {
   list-style: none;
@@ -131,9 +146,13 @@ body a {
   width: 100vw;
   height: 800px;
 }
+@media (max-width: 1024px) {
+  .section .title-swiper .swiper-wrapper {
+    height: 300px;
+  }
+}
 .section .title-swiper .swiper-wrapper .swiper-slide {
-  background-size: cover;
-  background-position: 50%;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
