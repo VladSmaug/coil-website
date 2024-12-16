@@ -1,3 +1,6 @@
+@import url("./fonts.css");
+@import url("../css/normalize.css");
+@import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
 html, body {
   height: 100%;
 }
@@ -108,8 +111,11 @@ body a {
 .header__btn:hover::after {
   width: 100%;
 }
-.header__btn span {
+.header__btn a {
   z-index: 1;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
 }
 
 .section {
@@ -123,7 +129,7 @@ body a {
 }
 .section .title-swiper .swiper-wrapper {
   width: 100vw;
-  height: 80vh;
+  height: 800px;
 }
 .section .title-swiper .swiper-wrapper .swiper-slide {
   background-size: cover;
@@ -191,10 +197,10 @@ body a {
   padding: 20px;
 }
 .section--product .product-block__info {
-  width: 48%;
+  flex-basis: 48%;
 }
 .section--product .product-block__img {
-  width: 48%;
+  flex-basis: 48%;
   background-image: url(../img/bonnel-mattress.jpg);
   background-size: cover;
   background-position: 50% 50%;
@@ -237,16 +243,17 @@ body a {
   text-align: center;
 }
 .section--products .products-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  display: flex;
+  gap: 20px;
   justify-items: center;
+  flex-wrap: wrap;
 }
 .section--products .products-grid--item {
-  width: 48%;
+  flex-basis: 48%;
   height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 2px solid;
 }
 .section--contacts {

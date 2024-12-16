@@ -1,4 +1,6 @@
-
+@import url("./fonts.css");
+@import url("../css/normalize.css");
+@import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
 
 html, body {
     height: 100%;
@@ -118,8 +120,11 @@ html, body {
           width: 100%; 
         }
       }
-      span {
+       a{
         z-index: 1; 
+        text-decoration: none; 
+        color: inherit; 
+        font-weight: bold;
       }
     }
   }
@@ -133,7 +138,7 @@ html, body {
       overflow: hidden;
       .swiper-wrapper{
         width: 100vw;
-        height: 80vh;
+        height: 800px;
         .swiper-slide {
           background-size: cover;
           background-position: 50%;
@@ -210,10 +215,10 @@ html, body {
         justify-content: space-between;
         padding: 20px;
         &__info{
-          width: 48%;
+          flex-basis: 48%;
         }
         &__img{
-          width: 48%;
+          flex-basis: 48%;
           background-image: url(../img/bonnel-mattress.jpg);
           background-size: cover;
           background-position: 50% 50%;
@@ -268,15 +273,16 @@ html, body {
         text-align: center;
       }
       .products-grid{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
+        display: flex;
+        gap: 20px;
         justify-items: center;
+        flex-wrap: wrap;
         &--item{
-          width: 48%;
+          flex-basis: 48%;
           height: 200px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           border: 2px solid;
         }
       }
