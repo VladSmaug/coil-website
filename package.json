@@ -1,0 +1,19 @@
+{
+  "name": "coil-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss:css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.82.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "swiper": "^11.1.15"
+  }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Адаптивний Лендінг</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="/" class="header__logo">
+        <img src="./img/Screenshot_893.png" alt="Логотип" />
+      </a>
+      <nav class="header__nav mobile__hide">
+        <ul class="nav__list">
+          <li><a href="#about">Про нас</a></li>
+          <li><a href="#services">Послуги</a></li>
+          <li><a href="#portfolio">Портфоліо</a></li>
+          <li><a href="#contact">Контакти</a></li>
+          <li class="nav__list--language-selector">
+            <select class="lang__select">
+              <option value="uk" selected>UA</option>
+              <option value="en">EN</option>
+              <option value="ru">RU</option>
+              <option value="ro">RO</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+      <button id="button-header" class="header__btn">
+        <canvas id="canvas"></canvas> 
+        <hover></hover>
+        <span>Зателефонувати</span>  
+      </button>
+    </div>
+  </header>
+
+  <section id="about" class="section section--about">
+    
+    <div class="title-swiper container">
+    
+      <!-- swiper slides -->
+      <div class="swiper-wrapper">
+          <div class="swiper-slide image-background-1" >
+              <div>
+                <h2>Ласкаво Просимо!</h2>
+                <p>Ми - найкраща компанія!</p>
+              <button id="button" class="header__btn">
+                <canvas id="canvas"></canvas> 
+                <hover></hover>
+                <span>Зателефонувати</span>  
+              </button>
+              </div>
+          </div>
+          
+          <div class="swiper-slide image-background-1" > 
+              <h2>HELLO WORLD</h2>
+          </div>
+          
+          <div class="swiper-slide image-background-1" >
+              <h2>Random Text 1</h2>
+          </div>
+          
+          <div class="swiper-slide image-background-1" >
+          </div>
+          
+          <div class="swiper-slide image-background-1" >
+          </div>
+      </div>
+      
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      
+      
+      <div class="swiper-pagination"></div>
+      
+    </div>
+    
+  </section>
+  <section id="product" class="section section--product">
+    <div class="container">
+      <div class="product-block">
+        <div class="product-block__info">
+          <h2>Товар</h2>
+          <p>Ми продаємо високоякісний товар.Ми продаємо високоякісний товар.Ми продаємо високоякісний товар.Ми продаємо високоякісний товар.Ми продаємо високоякісний товар.Ми продаємо високоякісний товар.Ми продаємо високоякісний товар.Ми продаємо високоякісний товар.Ми продаємо високоякісний товар.Ми продаємо високоякісний товар.Ми продаємо високоякісний товар.Ми продаємо високоякісний товар.Ми продаємо високоякісний товар. </p>
+        </div>
+        <div class="product-block__img">
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="services" class="section section--services">
+    <div class="container">
+      <h2>Наші переваги</h2>
+      <div class="services-wrapper">
+        <div class="services__list">
+          <div class="service">Найнижча ціна</div>
+          <div class="service">Надаємо професійну консультацію</div>
+          <div class="service">Гнучка система знижок та співпраці</div>
+          <div class="service">Оплата любим зручним для вас способом</div>
+          <div class="service">Складська програма</div>
+          <div class="service">Доставимо куди завгодно</div>
+        </div>
+        <button class="header__btn">
+          <canvas id="canvas"></canvas> 
+          <hover></hover>
+          <span>Дзвоніть зараз і отримайте знижку!</span>  
+        </button>
+      </div>
+    </div>
+  </section>
+  <section id="products" class="section section--products">
+    <div class="container">
+      <h2>Наш товар</h2>
+      <div class="products-grid">
+        <div class="products-grid--item">Висота</div>
+        <div class="products-grid--item">Висота</div>
+        <div class="products-grid--item">Висота</div>
+        <div class="products-grid--item">Висота</div>
+      </div>
+    </div>
+  </section>
+  <section id="contacts" class="section section--contacts">
+    <div class="container">
+      <h2>Наші контакти</h2>
+      <div class="telephone"><a href="tel:+38093000000"></a>+38093000000</div>
+      <div class="mail"><a href="mailto:test@gmail.com">Наш мейл</a></div>
+      <div class="address">м.Черкаси</div>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="footer__block">
+        <div class="footer__block--item">
+          <h3>Про нас</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae suscipi</p>
+        </div>
+        <div class="footer__block--item">
+          <h3>Дод інфо</h3>
+          <ul>
+            <li>Інфо</li>
+            <li>Інфо</li>
+          </ul>
+        </div>
+        <div class="footer__block--item">
+          <h3>Дод інфо</h3>
+          <ul>
+            <li>Інфо</li>
+            <li>Інфо</li>
+          </ul>
+        </div>
+        <div class="footer__block--item">
+          <h3>Ми в соцмережах</h3>
+          <div class="social-icons">
+            <div class="facebook"></div>
+            <div class="instagram"></div>
+            <div class="youtube"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script type="module" src="./js/init.js"></script>
+</html>

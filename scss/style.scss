@@ -1,0 +1,336 @@
+
+
+html, body {
+    height: 100%;
+  }
+  
+  body {
+    font-family: Montserrat-Regular,Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    a{
+      color: #505d6f;
+      text-decoration: none;
+    }
+  }
+  
+  .container {
+    width: 1320px;
+    max-width: 96%;
+    margin: 0 auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    position: sticky;
+    background: #f3e9dc;
+    color: #505d6f;
+    padding: 1rem 0;
+    .container{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    &__title {
+      text-align: center;
+    }
+    &__logo{
+      img{
+        width: 200px;
+      }
+    }
+    &__nav {
+      
+      .nav__list {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+  
+        a {
+          position: relative;
+          display: inline-block;
+          transition: color 0.5s ease;
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0; 
+            height: 2px; 
+            background-color: #505d6f; 
+            transition: width 0.3s ease; 
+          }
+        
+          &:hover {
+            background-color: #f3e9dc;
+            color: #505d6f; // Зміна кольору тексту
+            &::after {
+              width: 100%; // Підкреслення виїжджає на всю ширину
+            }
+          }
+        }
+      }
+    }
+    &__btn {
+      position: relative;
+      border: 2px solid #505d6f;
+      width: 210px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      color: #505d6f;
+      font-weight: bold;
+      overflow: hidden; 
+      transition: 0.5s;
+      cursor: pointer;
+      #canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; 
+      }
+    
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 100%;
+        background-color: #505d6f;
+        transition: width 1s ease;
+      }
+    
+      &:hover {
+        color: #f3e9dc; 
+        
+        &::after {
+          width: 100%; 
+        }
+      }
+      span {
+        z-index: 1; 
+      }
+    }
+  }
+  
+  .section {
+    padding: 2rem 0;
+    .title-swiper {
+      --swiper-theme-color: #505d6f;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      .swiper-wrapper{
+        width: 100vw;
+        height: 80vh;
+        .swiper-slide {
+          background-size: cover;
+          background-position: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          h2{
+            
+            display: block;
+            background-color: #f3e9dc;
+            text-align: center;
+            border-radius: 20px;
+            
+          }
+          div{
+            font-weight: bold;
+            width: 40%;
+            display: block;
+            background-color: #f3e9dc;
+            margin-block: 0;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: #333 5px 5px;
+            text-align: center;
+            button{
+              margin: 0 auto;
+            }
+          }
+      }
+      .image-background-1{
+        background-image: url("../img/6302850728_pruzhinnyj-blok-bonnel\ \(1\).webp");
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+      }
+      }
+      .swiper-button-next, .swiper-button-prev{
+        background-color: #f3e9dc;
+        border-radius: 30px;
+        height: 50px;
+        width: 50px;
+        border: 2px solid #505d6f;
+        &::after{
+          font-size: 22px;
+          line-height: 22px;
+          &:hover{
+            background-color: #505d6f;
+          }
+          &:active{
+            background-color: #505d6f;
+          }
+        }
+      }
+    }
+    &--about,
+    &--services,
+    &--product,
+    &--products,
+    &--contacts
+    {
+      background: #f4f4f4;
+      // background-color: #505d6f;
+    }
+    &--about{
+      padding: 0;
+      .container{
+        max-width: 100%;
+      }
+    }
+    &--product{
+      .product-block{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        &__info{
+          width: 48%;
+        }
+        &__img{
+          width: 48%;
+          background-image: url(../img/bonnel-mattress.jpg);
+          background-size: cover;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          border-radius: 20px;
+          box-shadow: rgba(80, 93, 111, 0.5) 5px 2px ;
+        }
+      }
+    }
+    
+    &--services{
+      
+      h2{
+        text-align: center;
+      }
+      .services-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        .header__btn{
+          width: 200px;
+          height: 200px;
+          border-radius: 100%;
+        }
+      }
+      .services__list {
+        
+        
+        .service {
+          display: flex;
+          padding: 1rem;
+          align-items: center;
+          font-weight: bold;
+          font-style: italic;
+          
+          &::before{
+            display: block;
+            content: "";
+            background-image: url("../img/Screenshot_881.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    &--products{
+      h2{
+        text-align: center;
+      }
+      .products-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        justify-items: center;
+        &--item{
+          width: 48%;
+          height: 200px;
+          border: 2px solid;
+        }
+      }
+    }
+    &--contacts {
+      height: 400px;
+      .container{
+        text-align: center;
+        gap: 20px;
+      }
+    }
+  }
+  .footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto; /* This will push the footer to the bottom */
+    .footer__block{
+      display: flex;
+      justify-content: space-between;
+      &--item{
+        width: 25%;
+        text-align: left;
+        .social-icons {
+          display: flex;
+          gap: 10px; // Відстань між іконками
+        
+          div {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-size: cover; // Масштабування зображення
+            background-position: center; // Центрування зображення
+            background-color: #fff;
+            
+          }
+        
+          .facebook {
+            background-image: url("../img/svg/facebook-color-svgrepo-com.svg");
+          }
+        
+          .instagram {
+            background-image: url("../img/svg/instagram-1-svgrepo-com.svg");
+          }
+        
+          .youtube {
+            background-image: url("../img/svg/youtube-color-svgrepo-com.svg");
+          }
+        }
+        ul{
+          list-style: none;
+          padding-left: 0;
+        }
+      }
+    }
+  }

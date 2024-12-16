@@ -1,0 +1,301 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Montserrat-Regular, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+body a {
+  color: #505d6f;
+  text-decoration: none;
+}
+
+.container {
+  width: 1320px;
+  max-width: 96%;
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  position: sticky;
+  background: #f3e9dc;
+  color: #505d6f;
+  padding: 1rem 0;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.header__title {
+  text-align: center;
+}
+.header__logo img {
+  width: 200px;
+}
+.header__nav .nav__list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.header__nav .nav__list a {
+  position: relative;
+  display: inline-block;
+  transition: color 0.5s ease;
+}
+.header__nav .nav__list a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #505d6f;
+  transition: width 0.3s ease;
+}
+.header__nav .nav__list a:hover {
+  background-color: #f3e9dc;
+  color: #505d6f;
+}
+.header__nav .nav__list a:hover::after {
+  width: 100%;
+}
+.header__btn {
+  position: relative;
+  border: 2px solid #505d6f;
+  width: 210px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #505d6f;
+  font-weight: bold;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.header__btn #canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.header__btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  background-color: #505d6f;
+  transition: width 1s ease;
+}
+.header__btn:hover {
+  color: #f3e9dc;
+}
+.header__btn:hover::after {
+  width: 100%;
+}
+.header__btn span {
+  z-index: 1;
+}
+
+.section {
+  padding: 2rem 0;
+}
+.section .title-swiper {
+  --swiper-theme-color: #505d6f;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.section .title-swiper .swiper-wrapper {
+  width: 100vw;
+  height: 80vh;
+}
+.section .title-swiper .swiper-wrapper .swiper-slide {
+  background-size: cover;
+  background-position: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.section .title-swiper .swiper-wrapper .swiper-slide h2 {
+  display: block;
+  background-color: #f3e9dc;
+  text-align: center;
+  border-radius: 20px;
+}
+.section .title-swiper .swiper-wrapper .swiper-slide div {
+  font-weight: bold;
+  width: 40%;
+  display: block;
+  background-color: #f3e9dc;
+  margin-block: 0;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: #333 5px 5px;
+  text-align: center;
+}
+.section .title-swiper .swiper-wrapper .swiper-slide div button {
+  margin: 0 auto;
+}
+.section .title-swiper .swiper-wrapper .image-background-1 {
+  background-image: url("../img/6302850728_pruzhinnyj-blok-bonnel (1).webp");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.section .title-swiper .swiper-button-next, .section .title-swiper .swiper-button-prev {
+  background-color: #f3e9dc;
+  border-radius: 30px;
+  height: 50px;
+  width: 50px;
+  border: 2px solid #505d6f;
+}
+.section .title-swiper .swiper-button-next::after, .section .title-swiper .swiper-button-prev::after {
+  font-size: 22px;
+  line-height: 22px;
+}
+.section .title-swiper .swiper-button-next::after:hover, .section .title-swiper .swiper-button-prev::after:hover {
+  background-color: #505d6f;
+}
+.section .title-swiper .swiper-button-next::after:active, .section .title-swiper .swiper-button-prev::after:active {
+  background-color: #505d6f;
+}
+.section--about, .section--services, .section--product, .section--products, .section--contacts {
+  background: #f4f4f4;
+}
+.section--about {
+  padding: 0;
+}
+.section--about .container {
+  max-width: 100%;
+}
+.section--product .product-block {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.section--product .product-block__info {
+  width: 48%;
+}
+.section--product .product-block__img {
+  width: 48%;
+  background-image: url(../img/bonnel-mattress.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  box-shadow: rgba(80, 93, 111, 0.5) 5px 2px;
+}
+.section--services h2 {
+  text-align: center;
+}
+.section--services .services-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.section--services .services-wrapper .header__btn {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+.section--services .services__list .service {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  font-weight: bold;
+  font-style: italic;
+}
+.section--services .services__list .service::before {
+  display: block;
+  content: "";
+  background-image: url("../img/Screenshot_881.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.section--products h2 {
+  text-align: center;
+}
+.section--products .products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-items: center;
+}
+.section--products .products-grid--item {
+  width: 48%;
+  height: 200px;
+  border: 2px solid;
+}
+.section--contacts {
+  height: 400px;
+}
+.section--contacts .container {
+  text-align: center;
+  gap: 20px;
+}
+
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto; /* This will push the footer to the bottom */
+}
+.footer .footer__block {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footer__block--item {
+  width: 25%;
+  text-align: left;
+}
+.footer .footer__block--item .social-icons {
+  display: flex;
+  gap: 10px;
+}
+.footer .footer__block--item .social-icons div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-color: #fff;
+}
+.footer .footer__block--item .social-icons .facebook {
+  background-image: url("../img/svg/facebook-color-svgrepo-com.svg");
+}
+.footer .footer__block--item .social-icons .instagram {
+  background-image: url("../img/svg/instagram-1-svgrepo-com.svg");
+}
+.footer .footer__block--item .social-icons .youtube {
+  background-image: url("../img/svg/youtube-color-svgrepo-com.svg");
+}
+.footer .footer__block--item ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
