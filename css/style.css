@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("./fonts.css");
 @import url("../css/normalize.css");
 @import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
@@ -53,6 +54,7 @@ body a {
 @media (max-width: 1024px) {
   .header .desc__hide {
     display: block;
+    font-size: 30px;
   }
 }
 @media (max-width: 1024px) {
@@ -144,11 +146,11 @@ body a {
 }
 .section .title-swiper .swiper-wrapper {
   width: 100vw;
-  height: 800px;
+  height: 600px;
 }
 @media (max-width: 1024px) {
   .section .title-swiper .swiper-wrapper {
-    height: 300px;
+    height: 400px;
   }
 }
 .section .title-swiper .swiper-wrapper .swiper-slide {
@@ -179,7 +181,7 @@ body a {
   margin: 0 auto;
 }
 .section .title-swiper .swiper-wrapper .image-background-1 {
-  background-image: url("../img/6302850728_pruzhinnyj-blok-bonnel (1).webp");
+  background-image: url("../img/боннель2.jpg");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -214,9 +216,21 @@ body a {
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  flex-wrap: wrap;
 }
 .section--product .product-block__info {
   flex-basis: 48%;
+}
+@media (max-width: 1024px) {
+  .section--product .product-block__info {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 96%;
+    align-items: center;
+  }
+  .section--product .product-block__info p {
+    text-align: center;
+  }
 }
 .section--product .product-block__img {
   flex-basis: 48%;
@@ -227,6 +241,11 @@ body a {
   border-radius: 20px;
   box-shadow: rgba(80, 93, 111, 0.5) 5px 2px;
 }
+@media (max-width: 1024px) {
+  .section--product .product-block__img {
+    flex-basis: 96%;
+  }
+}
 .section--services h2 {
   text-align: center;
 }
@@ -235,6 +254,11 @@ body a {
   align-items: center;
   justify-content: center;
   gap: 30px;
+}
+@media (max-width: 1024px) {
+  .section--services .services-wrapper {
+    flex-direction: column;
+  }
 }
 .section--services .services-wrapper .header__btn {
   width: 200px;
@@ -275,6 +299,12 @@ body a {
   align-items: center;
   border: 2px solid;
 }
+@media (max-width: 1024px) {
+  .section--products .products-grid--item {
+    flex-basis: 96%;
+    margin: 0 auto;
+  }
+}
 .section--contacts {
   height: 400px;
 }
@@ -293,10 +323,33 @@ body a {
 .footer .footer__block {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 1024px) {
+  .footer .footer__block {
+    gap: 20px;
+  }
+  .footer .footer__block ul, .footer .footer__block h3, .footer .footer__block p {
+    margin: 0;
+  }
 }
 .footer .footer__block--item {
-  width: 25%;
+  display: flex;
+  flex-basis: 25%;
   text-align: left;
+  flex-direction: column;
+}
+@media (max-width: 1024px) {
+  .footer .footer__block--item {
+    justify-content: flex-start;
+    flex-basis: 48%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 620px) {
+  .footer .footer__block--item {
+    flex-basis: 96%;
+  }
 }
 .footer .footer__block--item .social-icons {
   display: flex;

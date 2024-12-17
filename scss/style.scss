@@ -55,6 +55,7 @@ html, body {
     & .desc__hide{
       @media (max-width: 1024px) {
         display: block;
+        font-size: 30px;
       }
     }
     & .mobile__hide{
@@ -87,9 +88,9 @@ html, body {
         
           &:hover {
             background-color: #f3e9dc;
-            color: #505d6f; // Зміна кольору тексту
+            color: #505d6f; 
             &::after {
-              width: 100%; // Підкреслення виїжджає на всю ширину
+              width: 100%; 
             }
           }
         }
@@ -154,9 +155,9 @@ html, body {
       overflow: hidden;
       .swiper-wrapper{
         width: 100vw;
-        height: 800px;
+        height: 600px;
         @media (max-width: 1024px) {
-          height: 300px;
+          height: 400px;
         }
         .swiper-slide {
           background-position: center;
@@ -186,10 +187,11 @@ html, body {
           }
       }
       .image-background-1{
-        background-image: url("../img/6302850728_pruzhinnyj-blok-bonnel\ \(1\).webp");
+        background-image: url("../img/боннель2.jpg");
         background-size: cover;
         background-position: 50% 50%;
         background-repeat: no-repeat;
+        
       }
       }
       .swiper-button-next, .swiper-button-prev{
@@ -230,7 +232,17 @@ html, body {
         display: flex;
         justify-content: space-between;
         padding: 20px;
+        flex-wrap: wrap;
         &__info{
+          @media (max-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 96%;
+            align-items: center;
+            p{
+              text-align: center;
+            }
+          }
           flex-basis: 48%;
         }
         &__img{
@@ -241,6 +253,9 @@ html, body {
           background-repeat: no-repeat;
           border-radius: 20px;
           box-shadow: rgba(80, 93, 111, 0.5) 5px 2px ;
+          @media (max-width: 1024px) {
+            flex-basis: 96%;
+          }
         }
       }
     }
@@ -255,6 +270,9 @@ html, body {
         align-items: center;
         justify-content: center;
         gap: 30px;
+        @media (max-width: 1024px) {
+          flex-direction: column;
+        }
         .header__btn{
           width: 200px;
           height: 200px;
@@ -300,6 +318,10 @@ html, body {
           justify-content: center;
           align-items: center;
           border: 2px solid;
+          @media (max-width: 1024px) {
+            flex-basis: 96%;
+            margin: 0 auto;
+          }
         }
       }
     }
@@ -320,9 +342,27 @@ html, body {
     .footer__block{
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+      @media (max-width: 1024px) {
+        ul, h3, p{
+          margin: 0;
+        }
+        gap: 20px;
+      }
       &--item{
-        width: 25%;
+        display: flex;
+        flex-basis: 25%;
         text-align: left;
+        flex-direction: column;
+        @media (max-width: 1024px) {
+          justify-content: flex-start;
+          flex-basis: 48%;
+          margin: 0 auto;
+          
+        }
+        @media (max-width: 620px) {
+          flex-basis: 96%;
+        }
         .social-icons {
           display: flex;
           gap: 10px; 
