@@ -180,6 +180,11 @@ body a {
 .section .title-swiper .swiper-wrapper .swiper-slide div button {
   margin: 0 auto;
 }
+@media (max-width: 1024px) {
+  .section .title-swiper .swiper-wrapper .swiper-slide div {
+    width: 60%;
+  }
+}
 .section .title-swiper .swiper-wrapper .image-background-1 {
   background-image: url("../img/боннель2.jpg");
   background-size: cover;
