@@ -76,11 +76,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 document.querySelector('.lang__select').addEventListener('change', function () {
-  const selectedLang = this.value; // Отримуємо вибрану мову
-  const currentUrl = window.location.href; // Поточний URL
-  const baseUrl = currentUrl.split('/').slice(0, -2).join('/'); // Базовий URL без мовної частини
+  const selectedLang = this.value; 
+  const currentUrl = window.location.origin; 
+  let baseUrl;
+  console.log(currentUrl);
+  if (currentUrl.includes('localhost')) {
+    
+    baseUrl = currentUrl.split('/').slice(0, -1).join('/'); 
+  } else if (currentUrl.includes('github.io')) {
+    
+    baseUrl = currentUrl.split('/').slice(0, -2).join('/'); 
+  } else {
+    
+    baseUrl = currentUrl.split('/').slice(0, -2).join('/'); 
+  }
 
-  // Перенаправляємо до відповідної папки
+  
   if (selectedLang === 'en') {
     window.location.href = `${baseUrl}/en/`;
   } else if (selectedLang === 'uk') {
