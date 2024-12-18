@@ -74,35 +74,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
-
 document.querySelector('.lang__select').addEventListener('change', function () {
   const selectedLang = this.value; 
-  const currentUrl = window.location.origin; 
-  let baseUrl;
-  console.log(currentUrl);
-  if (currentUrl.includes('localhost')) {
-    
-    baseUrl = currentUrl.split('/').slice(0, -1).join('/'); 
-  } else if (currentUrl.includes('github.io')) {
-    
-    baseUrl = currentUrl.split('/').slice(0, -2).join('/'); 
-  } else {
-    
-    baseUrl = currentUrl.split('/').slice(0, -2).join('/'); 
+  const currentUrl = window.location.origin;
+  const currentPath = window.location.pathname;
+
+  // Розбиваємо поточний шлях на частини
+  const pathParts = currentPath.split('/').filter(part => part); // Очищаємо порожні елементи
+
+  // Якщо поточна мова є на першому місці, видаляємо її
+  if (['en', 'uk', 'ru', 'po', 'ro', 'md'].includes(pathParts[0])) {
+    pathParts.shift(); // Видаляємо поточну мову
   }
 
-  
-  if (selectedLang === 'en') {
-    window.location.href = `${baseUrl}/en/`;
-  } else if (selectedLang === 'uk') {
-    window.location.href = `${baseUrl}/uk/`;
-  } else if (selectedLang === 'ru') {
-    window.location.href = `${baseUrl}/ru/`;
-  } else if (selectedLang === 'po') {
-    window.location.href = `${baseUrl}/po/`;
-  } else if (selectedLang === 'ro') {
-    window.location.href = `${baseUrl}/ro/`;
-  } else if (selectedLang === 'md') {
-    window.location.href = `${baseUrl}/md/`;
+  // Якщо вибрана мова - це 'uk', то не додаємо /uk/
+  if (selectedLang === 'uk') {
+    const newUrl = `${currentUrl}/${pathParts.join('/')}`; // Використовуємо базовий URL без мови
+    window.location.href = newUrl;
+  } else {
+    // Для інших мов додаємо їх на початок шляху
+    const newUrl = `${currentUrl}/${selectedLang}/${pathParts.join('/')}`;
+    window.location.href = newUrl;
   }
 });
