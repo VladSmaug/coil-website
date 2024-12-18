@@ -31,3 +31,10 @@ function openNav() {
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
 }
+
+
+document.querySelectorAll('.nav__link').forEach(link => {
+  link.addEventListener('click', () => {
+    closeNav(); 
+  });
+});
