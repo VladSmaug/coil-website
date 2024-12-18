@@ -74,3 +74,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+document.querySelector('.lang__select').addEventListener('change', function () {
+  const selectedLang = this.value; // Отримуємо вибрану мову
+  const currentUrl = window.location.href; // Поточний URL
+  const baseUrl = currentUrl.split('/').slice(0, -2).join('/'); // Базовий URL без мовної частини
+
+  // Перенаправляємо до відповідної папки
+  if (selectedLang === 'en') {
+    window.location.href = `${baseUrl}/en/`;
+  } else if (selectedLang === 'uk') {
+    window.location.href = `${baseUrl}/uk/`;
+  } else if (selectedLang === 'ru') {
+    window.location.href = `${baseUrl}/ru/`;
+  } else if (selectedLang === 'po') {
+    window.location.href = `${baseUrl}/po/`;
+  } else if (selectedLang === 'ro') {
+    window.location.href = `${baseUrl}/ro/`;
+  } else if (selectedLang === 'md') {
+    window.location.href = `${baseUrl}/md/`;
+  }
+});

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coil Website RU</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+<link rel="manifest" href="/manifest.json">
+
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="/" class="header__logo">
+       
+      </a>
+      <nav class="header__nav mobile__hide">
+        <ul class="nav__list">
+          <li><a href="#about">Про нас</a></li>
+          <li><a href="#services">Переваги</a></li>
+          <li><a href="#products">Продукція</a></li>
+          <li><a href="#contact">Контакти</a></li>
+          <li class="nav__list--language-selector">
+            <select class="lang__select">
+              <option value="uk" selected>UA</option>
+              <option value="en">EN</option>
+              <option value="ru">RU</option>
+              <option value="po">PO</option>
+              <option value="ro">RO</option>
+              <option value="md">MD</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+      <button id="button-header" class="header__btn mobile__hide">
+        <canvas id="canvas"></canvas> 
+        <a href="#contacts">Зателефонувати</a>
+      </button>
+      <div id="myNav" class="overlay desc__hide">
+
+        
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+          <a href="#about" class="nav__link">Про нас</a>
+          <a href="#services" class="nav__link">Переваги</a>
+          <a href="#products" class="nav__link">Продукція</a>
+          <a href="#contact" class="nav__link">Контакти</a>
+            <select class="lang__select">
+              <option value="uk" selected>UA</option>
+              <option value="en">EN</option>
+              <option value="ru">RU</option>
+              <option value="ro">RO</option>
+            </select>
+        </div>
+
+      </div>
+    
+    <span class="desc__hide" onclick="openNav()">&#9776;</span>
+    </div>
+  </header>
+
+  <section id="about" class="section section--about">
+    
+    <div class="title-swiper container">
+    
+      <!-- swiper slides -->
+      <div class="swiper-wrapper">
+          <div class="swiper-slide image-background-1" >
+              <div>
+                <h2>Ласкаво Просимо!</h2>
+                <p>Виробництво пружинних блоків типу <b><i>Bonnel</i></b></p>
+              <button id="button" class="header__btn">
+                <canvas id="canvas"></canvas> 
+                <a href="#contacts">Зателефонувати</a>
+              </button>
+              </div>
+          </div>
+          
+          
+      </div>
+      
+      <!-- <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      
+      
+      <div class="swiper-pagination"></div> -->
+      
+    </div>
+    <button id="scrollToTop" class="scroll-to-top desc__hide" aria-label="Scroll to top">
+      ↑
+    </button>
+  </section>
+  <section id="product" class="section section--product">
+    <div class="container">
+      <div class="product-block">
+        <div class="product-block__info">
+          <h2>Пружинний блок</h2>
+          <p>Ми виготовляємо і  продаємо надійний продукт, що перевірений часом та досвідом.</p>
+          <p>Використовується в ліжках, диванах, матрацах, кріслах, у м'яких меблях для комфортного сидіння та лежання.</p>
+          <p>Довговічність та надійність  використання нашого виробу досягається за рахунок якісного пружинного металу.</p> 
+          <p>Особлива форма пружини типу Bonnel дає комфорт та ортопедичні властивості нашого та кінцевого продукту.</p>
+          <button id="button" class="header__btn">
+            <canvas id="canvas"></canvas> 
+            <a href="#contacts">Зателефонувати</a>
+          </button>
+        </div>
+        <div class="product-block__img">
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="services" class="section section--services">
+    <div class="container">
+      <h2>Співпраця</h2>
+      <div class="services-wrapper">
+        <div class="services__list">
+          <div class="service">Ціна від виробника</div>
+          <div class="service">Надаємо професійну консультацію</div>
+          <div class="service">Гнучка система знижок та співпраці</div>
+          <div class="service">Оплата любим зручним для вас способом</div>
+          <div class="service">Складська програма</div>
+          <div class="service">Доставимо куди завгодно</div>
+        </div>
+        <button class="header__btn">
+          <canvas id="canvas"></canvas> 
+          <a href="#contacts">Подзвонити</a>
+        </button>
+      </div>
+    </div>
+  </section>
+  <section id="products" class="section section--products">
+    <div class="container">
+      <h2>Наш товар</h2>
+      <div class="products-grid">
+        <div class="products-grid--item">Стандартні<span class="svg-icon-product"></span></div>
+        <div class="products-grid--item">Посилені<span class="svg-icon-product"><span class="svg-icon-product"></span></div>
+        <div class="products-grid--item">
+          <p>Висота 100 мм</p>
+          <p><i><b>та</b></i></p>
+          <p>Підлаштуємось під ваші розміри</p>
+          </div>
+        <div class="products-grid--item">Безрамочні</div>
+      </div>
+    </div>
+  </section>
+  <section id="contacts" class="section section--contacts">
+    <div class="container">
+      <h2>Наші контакти</h2>
+      <div class="telephone"><a href="tel:+380736707070">+380736707070</a></div>
+      <div class="telephone"><a href="tel:+380674706182">+380674706182</a></div>
+      <div class="mail"><a href="mailto:test@gmail.com">Наш мейл</a></div>
+      <div class="address">м.Черкаси</div>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="footer__block">
+        <div class="footer__block--item">
+          <h3>Про нас</h3>
+          <p>Ми вже більше 5 років безперебійно та постійно ведемо власне виробництво пружинних блоків типу Bonnel на швейцарському, турецькому та китайському обладнанні. Маємо постійних, задоволених клієнтів. Нарощуємо потужності та активно інвестуємо в наш бізнес. Відслідковуємо та реагуємо на потреби ринку та наших клієнтів.</p>
+        </div>
+        <!-- <div class="footer__block--item">
+          <h3>Додаткові посилання</h3>
+          <ul>
+            <li>Посилання</li>
+            <li>Посилання</li>
+          </ul>
+        </div>
+        <div class="footer__block--item">
+          <h3>Додаткові посилання</h3>
+          <ul>
+            <li>Посилання</li>
+            <li>Посилання</li>
+          </ul>
+        </div>
+        <div class="footer__block--item">
+          <h3>Ми в соцмережах</h3>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/"><div class="facebook"></div></a>
+            <a href="https://instagram.com/"><div class="instagram"></div></a>
+            <a href="https://www.youtube.com/"><div class="youtube"></div></a>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./js/init.js"></script>
+</html>
