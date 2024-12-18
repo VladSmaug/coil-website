@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coil Website</title>
-  <link rel="alternate" href="/en/" hreflang="en" />
-  <link rel="alternate" href="/uk/" hreflang="uk" />
-  <link rel="alternate" href="/ru/" hreflang="ru" />
-  <link rel="alternate" href="/po/" hreflang="po" />
-  <link rel="alternate" href="/ro/" hreflang="ro" />
-  <link rel="alternate" href="/md/" hreflang="md" />
+  <link rel="alternate" href="/en/" hreflang="en">
+  <link rel="alternate" href="/uk/" hreflang="uk">
+  <link rel="alternate" href="/ru/" hreflang="ru-UA">
+  <link rel="alternate" href="/pl/" hreflang="pl">
+  <link rel="alternate" href="/ro/" hreflang="ro">
+  <link rel="alternate" href="/hu/" hreflang="hu">
   <link rel="stylesheet" href="./css/style.css">
 
 <link rel="manifest" href="/manifest.json">
@@ -39,8 +39,8 @@
           </li>
         </ul>
       </nav>
-      <button id="button-header" class="header__btn mobile__hide">
-        <canvas id="canvas"></canvas> 
+      <button class="header__btn mobile__hide">
+        <canvas></canvas> 
         <a href="#contacts">Зателефонувати</a>
       </button>
       <div id="myNav" class="overlay desc__hide">
@@ -79,9 +79,9 @@
           <div class="swiper-slide image-background-1" >
               <div>
                 <h2>Ласкаво Просимо!</h2>
-                <p>Виробництво пружинних блоків типу <b><i>Bonnel</i></b></p>
-              <button id="button" class="header__btn">
-                <canvas id="canvas"></canvas> 
+                <h1>Виробництво пружинних блоків типу <b><i>Bonnel</i></b></h1>
+              <button  class="header__btn">
+                <canvas ></canvas> 
                 <a href="#contacts">Зателефонувати</a>
               </button>
               </div>
@@ -110,8 +110,8 @@
           <p>Використовується в ліжках, диванах, матрацах, кріслах, у м'яких меблях для комфортного сидіння та лежання.</p>
           <p>Довговічність та надійність  використання нашого виробу досягається за рахунок якісного пружинного металу.</p> 
           <p>Особлива форма пружини типу Bonnel дає комфорт та ортопедичні властивості нашого та кінцевого продукту.</p>
-          <button id="button" class="header__btn">
-            <canvas id="canvas"></canvas> 
+          <button class="header__btn">
+            <canvas ></canvas> 
             <a href="#contacts">Зателефонувати</a>
           </button>
         </div>
@@ -134,7 +134,7 @@
           <div class="service">Доставимо куди завгодно</div>
         </div>
         <button class="header__btn">
-          <canvas id="canvas"></canvas> 
+          <canvas></canvas> 
           <a href="#contacts">Подзвонити</a>
         </button>
       </div>
@@ -145,7 +145,7 @@
       <h2>Наш товар</h2>
       <div class="products-grid">
         <div class="products-grid--item">Стандартні<span class="svg-icon-product"></span></div>
-        <div class="products-grid--item">Посилені<span class="svg-icon-product"><span class="svg-icon-product"></span></div>
+        <div class="products-grid--item">Посилені<span class="svg-icon-product"></span><span class="svg-icon-product"></span></div>
         <div class="products-grid--item">
           <p>Висота 100 мм</p>
           <p><i><b>та</b></i></p>
@@ -168,25 +168,25 @@
   <footer id="contact" class="footer">
     <div class="container">
       <div class="footer__block">
-        <div class="footer__block--item">
+        <div class="footer__block-item">
           <h3>Про нас</h3>
           <p>Ми вже більше 5 років безперебійно та постійно ведемо власне виробництво пружинних блоків типу Bonnel на швейцарському, турецькому та китайському обладнанні. Маємо постійних, задоволених клієнтів. Нарощуємо потужності та активно інвестуємо в наш бізнес. Відслідковуємо та реагуємо на потреби ринку та наших клієнтів.</p>
         </div>
-        <!-- <div class="footer__block--item">
+        <!-- <div class="footer__block-item">
           <h3>Додаткові посилання</h3>
           <ul>
             <li>Посилання</li>
             <li>Посилання</li>
           </ul>
         </div>
-        <div class="footer__block--item">
+        <div class="footer__block-item">
           <h3>Додаткові посилання</h3>
           <ul>
             <li>Посилання</li>
             <li>Посилання</li>
           </ul>
         </div>
-        <div class="footer__block--item">
+        <div class="footer__block-item">
           <h3>Ми в соцмережах</h3>
           <div class="social-icons">
             <a href="https://www.facebook.com/"><div class="facebook"></div></a>
@@ -197,7 +197,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./js/init.js"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="./js/init.js"></script>
 </html>

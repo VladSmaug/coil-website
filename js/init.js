@@ -82,17 +82,17 @@ document.querySelector('.lang__select').addEventListener('change', function () {
   // Розбиваємо поточний шлях на частини
   const pathParts = currentPath.split('/').filter(part => part); // Очищаємо порожні елементи
 
-  // Якщо поточна мова є на першому місці, видаляємо її
-  if (['en', 'uk', 'ru', 'po', 'ro', 'md'].includes(pathParts[0])) {
-    pathParts.shift(); // Видаляємо поточну мову
+  
+  if (['en', 'uk', 'ru', 'pl', 'ro', 'hu'].includes(pathParts[0])) {
+    pathParts.shift(); 
   }
 
-  // Якщо вибрана мова - це 'uk', то не додаємо /uk/
+  
   if (selectedLang === 'uk') {
-    const newUrl = `${currentUrl}/${pathParts.join('/')}`; // Використовуємо базовий URL без мови
+    const newUrl = `${currentUrl}/${pathParts.join('/')}`; 
     window.location.href = newUrl;
   } else {
-    // Для інших мов додаємо їх на початок шляху
+   
     const newUrl = `${currentUrl}/${selectedLang}/${pathParts.join('/')}`;
     window.location.href = newUrl;
   }
