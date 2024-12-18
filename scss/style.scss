@@ -262,7 +262,9 @@ html, body {
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-    
+      @media (max-width: 1024px) {
+        right: 10px;
+      }
       &:hover {
         background-color: #f3e9dc5b;
       }

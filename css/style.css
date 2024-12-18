@@ -250,6 +250,11 @@ body a {
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
+@media (max-width: 1024px) {
+  .section .scroll-to-top {
+    right: 10px;
+  }
+}
 .section .scroll-to-top:hover {
   background-color: rgba(243, 233, 220, 0.3568627451);
 }
