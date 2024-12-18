@@ -243,6 +243,36 @@ html, body {
         }
       }
     }
+    .scroll-to-top {
+      position: fixed;
+      bottom: 50px;
+      right: 50px;
+      width: 50px;
+      height: 50px;
+      background-color: #f3e9dc;
+      color: #505d6f;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    
+      &:hover {
+        background-color: #f3e9dc5b;
+      }
+    
+      &.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
     &--about,
     &--services,
     &--product,
@@ -257,6 +287,7 @@ html, body {
       .container{
         max-width: 100%;
       }
+      
     }
     &--product{
       .product-block{

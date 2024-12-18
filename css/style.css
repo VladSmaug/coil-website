@@ -230,6 +230,34 @@ body a {
 .section .title-swiper .swiper-button-next::after:active, .section .title-swiper .swiper-button-prev::after:active {
   background-color: #505d6f;
 }
+.section .scroll-to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  background-color: #f3e9dc;
+  color: #505d6f;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+.section .scroll-to-top:hover {
+  background-color: rgba(243, 233, 220, 0.3568627451);
+}
+.section .scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 .section--about, .section--services, .section--product, .section--products, .section--contacts {
   background: #f4f4f4;
 }
