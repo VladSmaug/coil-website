@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coil Website English</title>
+  <title>Spring blocks to order from the manufacturer - Coil</title>
+  <meta name="description" content="Spring blocks for sofas and any kind of furniture, wholesale and retail at manufacturer's prices - Coil">
   <link rel="alternate" href="/en/" hreflang="en">
   <link rel="alternate" href="/uk/" hreflang="uk">
   <link rel="alternate" href="/ru/" hreflang="ru-UA">
@@ -16,18 +17,19 @@
 </head>
 <body>
   <header class="header">
+   
     <div class="container">
       <a href="/" class="header__logo">
        
       </a>
       <nav class="header__nav mobile__hide">
         <ul class="nav__list">
-          <li><a href="#about">Про нас</a></li>
-          <li><a href="#services">Переваги</a></li>
-          <li><a href="#products">Продукція</a></li>
-          <li><a href="#contact">Контакти</a></li>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#services">Advantages</a></li>
+          <li><a href="#products">Product</a></li>
+          <li><a href="#contact">Contacts</a></li>
           <li class="nav__list--language-selector">
-            <select class="lang__select">
+            <select class="lang__select--desktop">
               <option value="uk">UA</option>
               <option value="en" selected>EN</option>
               <option value="ru">RU</option>
@@ -38,22 +40,21 @@
           </li>
         </ul>
       </nav>
-      <button id="button-header" class="header__btn mobile__hide">
-        <canvas id="canvas"></canvas> 
-        <a href="#contacts">Зателефонувати</a>
-      </button>
+      <a href="#contacts" class="header__btn mobile__hide">
+        <canvas></canvas> 
+        <div>Call us</div>
+      </a>
       <div id="myNav" class="overlay desc__hide">
 
         
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-        <!-- Overlay content -->
         <div class="overlay-content">
-          <a href="#about" class="nav__link">Про нас</a>
-          <a href="#services" class="nav__link">Переваги</a>
-          <a href="#products" class="nav__link">Продукція</a>
-          <a href="#contact" class="nav__link">Контакти</a>
-            <select class="lang__select">
+          <a href="#about" class="nav__link">About us</a>
+          <a href="#services" class="nav__link">Advantages</a>
+          <a href="#products" class="nav__link">Product</a>
+          <a href="#contact" class="nav__link">Contacts</a>
+            <select class="lang__select--mobile">
               <option value="uk">UA</option>
               <option value="en" selected>EN</option>
               <option value="ru">RU</option>
@@ -72,28 +73,20 @@
   <section id="about" class="section section--about">
     
     <div class="title-swiper container">
-    
-      <!-- swiper slides -->
       <div class="swiper-wrapper">
           <div class="swiper-slide image-background-1" >
               <div>
-                <h2>Ласкаво Просимо!</h2>
-                <p>Виробництво пружинних блоків типу <b><i>Bonnel</i></b></p>
-              <button id="button" class="header__btn">
-                <canvas id="canvas"></canvas> 
-                <a href="#contacts">Зателефонувати</a>
-              </button>
+                <h2>Welcome!</h2>
+                <h1>Production of spring blocks type <b><i>Bonnel</i></b></h1>
+                <a href="#contacts" class="header__btn">
+                  <canvas></canvas> 
+                  <div>Call us</div>
+                </a>
               </div>
           </div>
           
           
       </div>
-      
-      <!-- <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      
-      
-      <div class="swiper-pagination"></div> -->
       
     </div>
     <button id="scrollToTop" class="scroll-to-top desc__hide" aria-label="Scroll to top">
@@ -104,15 +97,15 @@
     <div class="container">
       <div class="product-block">
         <div class="product-block__info">
-          <h2>Пружинний блок</h2>
-          <p>Ми виготовляємо і  продаємо надійний продукт, що перевірений часом та досвідом.</p>
-          <p>Використовується в ліжках, диванах, матрацах, кріслах, у м'яких меблях для комфортного сидіння та лежання.</p>
-          <p>Довговічність та надійність  використання нашого виробу досягається за рахунок якісного пружинного металу.</p> 
-          <p>Особлива форма пружини типу Bonnel дає комфорт та ортопедичні властивості нашого та кінцевого продукту.</p>
-          <button id="button" class="header__btn">
-            <canvas id="canvas"></canvas> 
-            <a href="#contacts">Зателефонувати</a>
-          </button>
+          <h2>Spring block</h2>
+          <p>We manufacture and sell a reliable product that has been tested by time and experience.</p>
+          <p>It is used in beds, sofas, mattresses, chairs, and soft furniture for comfortable sitting and lying down.</p>
+          <p>Durability and reliability of use of our product is achieved due to high-quality spring metal.</p> 
+          <p>The special shape of the Bonnel type spring provides comfort and orthopedic properties of our and the final product.</p>
+          <a href="#contacts" class="header__btn">
+            <canvas></canvas> 
+            <div>Call us</div>
+          </a>
         </div>
         <div class="product-block__img">
 
@@ -122,81 +115,59 @@
   </section>
   <section id="services" class="section section--services">
     <div class="container">
-      <h2>Співпраця</h2>
+      <h2>Cooperation</h2>
       <div class="services-wrapper">
         <div class="services__list">
-          <div class="service">Ціна від виробника</div>
-          <div class="service">Надаємо професійну консультацію</div>
-          <div class="service">Гнучка система знижок та співпраці</div>
-          <div class="service">Оплата любим зручним для вас способом</div>
-          <div class="service">Складська програма</div>
-          <div class="service">Доставимо куди завгодно</div>
+          <div class="service">Manufacturer`s price</div>
+          <div class="service">Professional advice provision</div>
+          <div class="service">Discounts and cooperation flexible system</div>
+          <div class="service">Convenient Payment</div>
+          <div class="service">Warehouse program</div>
+          <div class="service">Fast and convenient delivery</div>
         </div>
-        <button class="header__btn">
-          <canvas id="canvas"></canvas> 
-          <a href="#contacts">Подзвонити</a>
-        </button>
+        <a href="#contacts" class="header__btn">
+          <canvas></canvas> 
+          <div>Call us</div>
+        </a>
       </div>
     </div>
   </section>
   <section id="products" class="section section--products">
     <div class="container">
-      <h2>Наш товар</h2>
+      <h2>Our product</h2>
       <div class="products-grid">
-        <div class="products-grid--item">Стандартні<span class="svg-icon-product"></span></div>
-        <div class="products-grid--item">Посилені<span class="svg-icon-product"><span class="svg-icon-product"></span></div>
+        <div class="products-grid--item">Standard<span class="svg-icon-product"></span></div>
+        <div class="products-grid--item">Reinforced<span class="svg-icon-product"></span><span class="svg-icon-product"></span></div>
         <div class="products-grid--item">
-          <p>Висота 100 мм</p>
-          <p><i><b>та</b></i></p>
-          <p>Підлаштуємось під ваші розміри</p>
+          <p>Height 100 mm</p>
+          <p><i><b>and</b></i></p>
+          <p>We will adapt to your dimensions</p>
           </div>
-        <div class="products-grid--item">Безрамочні</div>
+        <div class="products-grid--item">Frameless</div>
       </div>
     </div>
   </section>
   <section id="contacts" class="section section--contacts">
     <div class="container">
-      <h2>Наші контакти</h2>
+      <h2>Our contacts</h2>
       <div class="telephone"><a href="tel:+380736707070">+380736707070</a></div>
       <div class="telephone"><a href="tel:+380674706182">+380674706182</a></div>
-      <div class="mail"><a href="mailto:test@gmail.com">Наш мейл</a></div>
-      <div class="address">м.Черкаси</div>
+      <div class="mail"><a href="mailto:test@gmail.com">Mail</a></div>
+      <div class="address">Cherkasy city</div>
     </div>
   </section>
 
   <footer id="contact" class="footer">
     <div class="container">
       <div class="footer__block">
-        <div class="footer__block--item">
-          <h3>Про нас</h3>
-          <p>Ми вже більше 5 років безперебійно та постійно ведемо власне виробництво пружинних блоків типу Bonnel на швейцарському, турецькому та китайському обладнанні. Маємо постійних, задоволених клієнтів. Нарощуємо потужності та активно інвестуємо в наш бізнес. Відслідковуємо та реагуємо на потреби ринку та наших клієнтів.</p>
+        <div class="footer__block-item">
+          <h3>About us</h3>
+          <p>For more than 5 years, we have been uninterruptedly and continuously conducting our own production of Bonnel type spring blocks on Swiss, Turkish and Chinese equipment. We have regular, satisfied customers. We are increasing capacity and actively investing in our business. We monitor and respond to the needs of the market and our customers.</p>
         </div>
-        <!-- <div class="footer__block--item">
-          <h3>Додаткові посилання</h3>
-          <ul>
-            <li>Посилання</li>
-            <li>Посилання</li>
-          </ul>
-        </div>
-        <div class="footer__block--item">
-          <h3>Додаткові посилання</h3>
-          <ul>
-            <li>Посилання</li>
-            <li>Посилання</li>
-          </ul>
-        </div>
-        <div class="footer__block--item">
-          <h3>Ми в соцмережах</h3>
-          <div class="social-icons">
-            <a href="https://www.facebook.com/"><div class="facebook"></div></a>
-            <a href="https://instagram.com/"><div class="instagram"></div></a>
-            <a href="https://www.youtube.com/"><div class="youtube"></div></a>
-          </div>
-        </div> -->
       </div>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="../js/init.js"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="../js/init.js"></script>
 </html>

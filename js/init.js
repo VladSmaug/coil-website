@@ -40,6 +40,8 @@ document.querySelectorAll('.nav__link').forEach(link => {
 });
 
 
+
+
 const scrollToTopButton = document.getElementById('scrollToTop');
 
 
@@ -74,26 +76,61 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
-document.querySelector('.lang__select').addEventListener('change', function () {
-  const selectedLang = this.value; 
-  const currentUrl = window.location.origin;
-  const currentPath = window.location.pathname;
 
-  // Розбиваємо поточний шлях на частини
-  const pathParts = currentPath.split('/').filter(part => part); // Очищаємо порожні елементи
 
-  
-  if (['en', 'uk', 'ru', 'pl', 'ro', 'hu'].includes(pathParts[0])) {
-    pathParts.shift(); 
+document.addEventListener('DOMContentLoaded', () => {
+  // Обробник для desktop версії
+  const desktopLangSelect = document.querySelector('.lang__select--desktop');
+  if (desktopLangSelect) {
+    desktopLangSelect.addEventListener('change', function () {
+      const selectedLang = this.value;
+      const currentUrl = window.location.origin;
+      const currentPath = window.location.pathname;
+
+      // Розбиваємо поточний шлях на частини
+      const pathParts = currentPath.split('/').filter(part => part); // Очищаємо порожні елементи
+
+      // Якщо є мова в шляху, видаляємо її
+      if (['en', 'uk', 'ru', 'pl', 'ro', 'hu'].includes(pathParts[0])) {
+        pathParts.shift(); 
+      }
+
+      // Формуємо нову URL-адресу для desktop
+      const newUrl = selectedLang === 'uk' 
+        ? `${currentUrl}/${pathParts.join('/')}` 
+        : `${currentUrl}/${selectedLang}/${pathParts.join('/')}`;
+      
+      // Перенаправляємо на нову URL-адресу
+      window.location.href = newUrl;
+      closeNav(); // Закриваємо навігацію
+    });
   }
 
-  
-  if (selectedLang === 'uk') {
-    const newUrl = `${currentUrl}/${pathParts.join('/')}`; 
-    window.location.href = newUrl;
-  } else {
-   
-    const newUrl = `${currentUrl}/${selectedLang}/${pathParts.join('/')}`;
-    window.location.href = newUrl;
+  // Обробник для mobile версії
+  const mobileLangSelect = document.querySelector('.lang__select--mobile');
+  if (mobileLangSelect) {
+    mobileLangSelect.addEventListener('change', function () {
+      const selectedLang = this.value;
+      const currentUrl = window.location.origin;
+      const currentPath = window.location.pathname;
+
+      // Розбиваємо поточний шлях на частини
+      const pathParts = currentPath.split('/').filter(part => part); // Очищаємо порожні елементи
+
+      // Якщо є мова в шляху, видаляємо її
+      if (['en', 'uk', 'ru', 'pl', 'ro', 'hu'].includes(pathParts[0])) {
+        pathParts.shift(); 
+      }
+
+      // Формуємо нову URL-адресу для mobile
+      const newUrl = selectedLang === 'uk' 
+        ? `${currentUrl}/${pathParts.join('/')}` 
+        : `${currentUrl}/${selectedLang}/${pathParts.join('/')}`;
+      
+      // Перенаправляємо на нову URL-адресу
+      window.location.href = newUrl;
+      closeNav(); // Закриваємо навігацію
+    });
   }
 });
+
