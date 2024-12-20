@@ -41,16 +41,32 @@ body a {
   justify-content: space-between;
   flex-direction: row;
 }
+.header .location-placement {
+  font-size: 20px !important;
+  text-align: center;
+}
+@media (max-width: 420px) {
+  .header .location-placement {
+    font-size: 18px !important;
+  }
+}
 .header__title {
   text-align: center;
 }
 .header__logo {
   border: 2px solid;
   border-radius: 10px;
-  background-image: url("../img/Screenshot_893.png");
+  background-image: url("../img/coil-logo.png");
   background-size: cover;
   height: 80px;
   width: 200px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .header__logo {
+    height: 60px;
+    width: 150px;
+  }
 }
 .header .desc__hide {
   display: none;
@@ -299,8 +315,19 @@ body a {
   padding: 20px;
   flex-wrap: wrap;
 }
+@media (max-width: 1024px) {
+  .section--product .product-block {
+    justify-content: center;
+  }
+}
 .section--product .product-block__info {
   flex-basis: 48%;
+}
+.section--product .product-block__info a {
+  margin: 0 auto;
+}
+.section--product .product-block__info h2 {
+  text-align: center;
 }
 @media (max-width: 1024px) {
   .section--product .product-block__info {
@@ -310,7 +337,7 @@ body a {
     align-items: center;
   }
   .section--product .product-block__info p {
-    text-align: center;
+    text-align: left;
   }
 }
 .section--product .product-block__info p {
@@ -323,7 +350,7 @@ body a {
   display: block;
   position: absolute;
   content: "";
-  background-image: url("../img/Screenshot_881.svg");
+  background-image: url("../img/coil.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 30px;
@@ -356,6 +383,7 @@ body a {
 @media (max-width: 1024px) {
   .section--services .services-wrapper {
     flex-direction: column;
+    padding: 10px;
   }
 }
 .section--services .services__list .service {
@@ -364,16 +392,20 @@ body a {
   align-items: center;
   font-weight: bold;
   font-style: italic;
+  position: relative;
+  padding-left: 30px;
 }
 .section--services .services__list .service::before {
   display: block;
   content: "";
-  background-image: url("../img/Screenshot_881.svg");
+  background-image: url("../img/coil.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
   margin-right: 10px;
+  position: absolute;
+  left: 0;
 }
 .section--products h2 {
   text-align: center;
@@ -409,9 +441,11 @@ body a {
   display: block;
   width: 20px;
   height: 20px;
-  background-image: url("../img/Screenshot_881.svg");
+  background-image: url("../img/coil.svg");
   background-size: contain;
   background-repeat: no-repeat;
+}
+.section--products .products-grid--item .svg-icon-product:first-child {
   margin-left: 20px;
 }
 .section--contacts {

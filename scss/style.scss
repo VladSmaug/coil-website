@@ -41,17 +41,29 @@ html, body {
       justify-content: space-between;
       flex-direction: row;
     }
+    .location-placement{
+      font-size: 20px !important;
+      text-align: center;
+      @media (max-width: 420px) {
+        font-size: 18px !important;
+      }
+    }
     &__title {
       text-align: center;
     }
     &__logo{
+      
       border: 2px solid ;
       border-radius: 10px;
-      
-      background-image: url("../img/Screenshot_893.png");
+      background-image: url("../img/coil-logo.png");
       background-size: cover;
       height: 80px;
       width: 200px;
+      text-align: center;
+      @media (max-width: 768px) {
+        height: 60px;
+        width: 150px;
+      }
     }
     .desc__hide{
       display: none;
@@ -320,15 +332,24 @@ html, body {
         justify-content: space-between;
         padding: 20px;
         flex-wrap: wrap;
+        @media (max-width: 1024px) {
+          justify-content: center;
+        }
         &__info{
           flex-basis: 48%;
+          a{
+            margin: 0 auto;
+          }
+          h2{
+            text-align: center;
+          }
           @media (max-width: 1024px) {
             display: flex;
             flex-direction: column;
             flex-basis: 96%;
             align-items: center;
             p{
-              text-align: center;
+              text-align: left;
             }
           }
           p{
@@ -340,7 +361,7 @@ html, body {
               display: block;
               position: absolute;
               content: "";
-              background-image: url("../img/Screenshot_881.svg");
+              background-image: url("../img/coil.svg");
               background-size: contain;
               background-repeat: no-repeat;
               width: 30px;
@@ -376,6 +397,7 @@ html, body {
         gap: 30px;
         @media (max-width: 1024px) {
           flex-direction: column;
+          padding: 10px;
         }
         // .header__btn{
           
@@ -390,16 +412,20 @@ html, body {
           align-items: center;
           font-weight: bold;
           font-style: italic;
+          position: relative;
+          padding-left: 30px;
           
           &::before{
             display: block;
             content: "";
-            background-image: url("../img/Screenshot_881.svg");
+            background-image: url("../img/coil.svg");
             background-size: contain;
             background-repeat: no-repeat;
             width: 20px;
             height: 20px;
             margin-right: 10px;
+            position: absolute;
+            left: 0;
           }
         }
       }
@@ -431,15 +457,21 @@ html, body {
             flex-basis: 96%;
             margin: 0 auto;
           }
-
+          
+           
+          
+          
           .svg-icon-product{
             display: block;
             width: 20px;
             height: 20px;
-            background-image: url("../img/Screenshot_881.svg");
+            background-image: url("../img/coil.svg");
             background-size: contain;
             background-repeat: no-repeat;
-            margin-left: 20px;
+          
+            &:first-child{
+              margin-left: 20px;
+            }
           }
         }
       }
