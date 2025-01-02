@@ -1,6 +1,6 @@
 @import url("./fonts.css");
 @import url("../css/normalize.css");
-@import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
+@import url("./swiper.scss");
 @import url("./menu.css");
 
 html, body {
@@ -257,7 +257,9 @@ html, body {
         background-size: cover;
         background-position: 50% 50%;
         background-repeat: no-repeat;
-        
+        @media (max-width: 1024px) {
+          background-image: url("../img/coil-main-image.webp");
+        }
       }
       }
       .swiper-button-next, .swiper-button-prev{
@@ -380,6 +382,7 @@ html, body {
           box-shadow: rgba(80, 93, 111, 0.5) 5px 2px ;
           @media (max-width: 1024px) {
             flex-basis: 96%;
+            background-image: url("../img/coil-main-image.webp");
           }
         }
       }
@@ -456,6 +459,7 @@ html, body {
           @media (max-width: 1024px) {
             flex-basis: 96%;
             margin: 0 auto;
+            height: 130px;
           }
           
            
@@ -513,6 +517,11 @@ html, body {
         }
         @media (max-width: 620px) {
           flex-basis: 96%;
+        }
+        .developed{
+          // font-size: 16px;
+          text-align: center;
+          margin-top: 10px;
         }
         .social-icons {
           display: flex;

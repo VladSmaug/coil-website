@@ -1,6 +1,6 @@
 @import url("./fonts.css");
 @import url("../css/normalize.css");
-@import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
+@import url("./swiper.css");
 @import url("./menu.css");
 html, body {
   height: 100%;
@@ -250,6 +250,11 @@ body a {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
+@media (max-width: 1024px) {
+  .section .title-swiper .swiper-wrapper .image-background-1 {
+    background-image: url("../img/coil-main-image.webp");
+  }
+}
 .section .title-swiper .swiper-button-next, .section .title-swiper .swiper-button-prev {
   background-color: #f3e9dc;
   border-radius: 30px;
@@ -369,6 +374,7 @@ body a {
 @media (max-width: 1024px) {
   .section--product .product-block__img {
     flex-basis: 96%;
+    background-image: url("../img/coil-main-image.webp");
   }
 }
 .section--services h2 {
@@ -435,6 +441,7 @@ body a {
   .section--products .products-grid--item {
     flex-basis: 96%;
     margin: 0 auto;
+    height: 130px;
   }
 }
 .section--products .products-grid--item .svg-icon-product {
@@ -493,6 +500,10 @@ body a {
   .footer .footer__block-item {
     flex-basis: 96%;
   }
+}
+.footer .footer__block-item .developed {
+  text-align: center;
+  margin-top: 10px;
 }
 .footer .footer__block-item .social-icons {
   display: flex;
